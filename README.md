@@ -39,6 +39,8 @@ The comparator output is digital information and assumes the values of 0 or 3.3V
 
 All the elements that make up the Dummy Load are 1W SMD resistors for which 1W is assumed as the maximum applicable power, in fact, since only the value of 10 Ohm is obtained with a single resistor, if really necessary, it will be possible to apply higher powers in function of the set value. This operation can irreversibly damage the load if during use combinations are chosen that are not able to withstand the applied power. In any case it is recommended not to apply more than 2W.
 
+Inside the board hare present a free Op Amp with minimum circuit usable with Inp+ Inp- and Out for integration and experimental use
+
 All schematics and PCB design are provided in KiCad format
 
 The software is developed with Visual Studio Code through the PlatformIo App and is compatible with the "Arduino" environment
@@ -86,6 +88,8 @@ Per quanto riguarda i valori misurati, questi sono convertiti in Corrente Contin
 L'uscita del comparatore è una informazione digitale ed assume i valori di 0 o 3.3V
 
 Tutti gli elementi che compongono il Carico Fittizio sono resistenze SMD da 1W per cui si assume 1W come potenza massima applicabile, in effetti, siccome solo il valore di 10 Ohm è ottenuto con una sola resistenza, se realmente necessario,sarà possibile applicare potenze maggiori  in funzione del valore impostato. Questa operazione può danneggiare irreversibilmente il carico se durante l'uso si scelgono combinazioni che non siano in grado di sopportare la potenza applicata. In ogni caso si consiglia di non applicare più di 2W.
+
+All'interno della scheda è presente un Op Amp circuitato con i componenti minimi e utilizzabile tramite i pin Inp+ Inp- e Out, da usare per integrazioni o esperimenti.
 
 Tutti gli schemi e il progetto del PCB sono forniti in formato KiCad
 
