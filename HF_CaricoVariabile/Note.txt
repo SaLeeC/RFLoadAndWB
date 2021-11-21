@@ -1,0 +1,3 @@
+#Comparatrore-Uscita digitale
+Dopo aver completato la prima messa a punto del Weatston Bridge e verificato il corretto funzionamento dei singoli blocchi, verificare la corretta sovrapponibilità dell'uscita digitale del comparatore con due bit dell'espander così da poter leggere il comparatore direttamente in I2C.
+Questa modifica va fatta aggiungendo due ponticelli cablati
