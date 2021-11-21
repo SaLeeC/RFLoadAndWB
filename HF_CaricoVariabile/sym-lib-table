@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name HF_CaricoVariabile_r00-rescue)(type Legacy)(uri ${KIPRJMOD}/HF_CaricoVariabile_r00-rescue.lib)(options "")(descr ""))
+)

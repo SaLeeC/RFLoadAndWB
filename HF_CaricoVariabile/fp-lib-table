@@ -1,0 +1,3 @@
+(fp_lib_table
+  (lib (name HF_CaricoVariabile_r00)(type KiCad)(uri ${KIPRJMOD}/HF_CaricoVariabile_r00.pretty)(options "")(descr ""))
+)

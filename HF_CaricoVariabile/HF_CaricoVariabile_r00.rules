@@ -1,0 +1,181 @@
+
+(rules PCB HF_CaricoVariabile_r00
+  (snap_angle 
+    fortyfive_degree
+  )
+  (autoroute_settings
+    (fanout off)
+    (eu.mihosoft.freerouting.autoroute on)
+    (postroute on)
+    (vias on)
+    (via_costs 50)
+    (plane_via_costs 5)
+    (start_ripup_costs 100)
+    (start_pass_no 5599)
+    (layer_rule F.Cu
+      (active on)
+      (preferred_direction vertical)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 2.1)
+    )
+    (layer_rule B.Cu
+      (active on)
+      (preferred_direction horizontal)
+      (preferred_direction_trace_costs 1.0)
+      (against_preferred_direction_trace_costs 1.9)
+    )
+  )
+  (rule
+    (width 250.0)
+    (clear 200.2)
+    (clear 125.0 (type smd_to_turn_gap))
+    (clear 400.2 (type default_+5VDigital))
+    (clear 400.2 (type default_"GND-Analog"))
+    (clear 400.2 (type default_RF))
+    (clear 50.0 (type smd_smd))
+    (clear 400.2 (type smd_+5VDigital))
+    (clear 400.2 (type smd_"GND-Analog"))
+    (clear 400.2 (type smd_RF))
+    (clear 400.2 (type "kicad_default"_+5VDigital))
+    (clear 400.2 (type "kicad_default"_"GND-Analog"))
+    (clear 400.2 (type "kicad_default"_RF))
+    (clear 400.2 (type +5VDigital_+5VDigital))
+    (clear 400.2 (type +5VDigital_"GND-Analog"))
+    (clear 400.2 (type +5VDigital_RF))
+    (clear 400.2 (type "GND-Analog"_"GND-Analog"))
+    (clear 400.2 (type "GND-Analog"_RF))
+    (clear 400.2 (type RF_RF))
+  )
+  (padstack "Via[0-1]_800:400_um"
+    (shape
+      (circle F.Cu 800.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 800.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (padstack "Via[0-1]_4000:3400_um"
+    (shape
+      (circle F.Cu 4000.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 4000.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (via 
+    "Via[0-1]_800:400_um" "Via[0-1]_800:400_um" default
+  )
+  (via 
+    "Via[0-1]_4000:3400_um" "Via[0-1]_4000:3400_um" default
+  )
+  (via 
+    "Via[0-1]_800:400_um-kicad_default" "Via[0-1]_800:400_um" "kicad_default"
+  )
+  (via 
+    "Via[0-1]_4000:3400_um-kicad_default" "Via[0-1]_4000:3400_um" "kicad_default"
+  )
+  (via 
+    "Via[0-1]_800:400_um-+5VDigital" "Via[0-1]_800:400_um" +5VDigital
+  )
+  (via 
+    "Via[0-1]_4000:3400_um-+5VDigital" "Via[0-1]_4000:3400_um" +5VDigital
+  )
+  (via 
+    "Via[0-1]_800:400_um-GND-Analog" "Via[0-1]_800:400_um" "GND-Analog"
+  )
+  (via 
+    "Via[0-1]_4000:3400_um-GND-Analog" "Via[0-1]_4000:3400_um" "GND-Analog"
+  )
+  (via 
+    "Via[0-1]_800:400_um-RF" "Via[0-1]_800:400_um" RF
+  )
+  (via 
+    "Via[0-1]_4000:3400_um-RF" "Via[0-1]_4000:3400_um" RF
+  )
+  (via_rule
+    default "Via[0-1]_800:400_um"
+  )
+  (via_rule
+    "kicad_default" "Via[0-1]_800:400_um-kicad_default"
+  )
+  (via_rule
+    +5VDigital "Via[0-1]_800:400_um-+5VDigital"
+  )
+  (via_rule
+    "GND-Analog" "Via[0-1]_800:400_um-GND-Analog"
+  )
+  (via_rule
+    RF "Via[0-1]_800:400_um-RF"
+  )
+  (class default
+    (clearance_class default)
+    (via_rule default)
+    (rule
+      (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "kicad_default"
+    "Net-(20-Ohm1-Pad7)" "Net-(5-Ohm1-Pad2)" "Net-(5-Ohm1-Pad7)" "Net-(Load/WB1-Pad5)" GND "Net-(10R1-Pad2)" "Net-(20R1-Pad2)" "Net-(5R1-Pad2)"
+    "Net-(IC2-Pad4)" "Net-(IC3-Pad4)" "/HFCaricoVariabile-Load/RLLoad-WB" "Net-(IC4-Pad4)" "Net-(IC5-Pad4)" "Net-(IC6-Pad4)" "Net-(IC7-Pad4)" "Net-(IC8-Pad4)"
+    "Net-(IC9-Pad4)" "Net-(IC10-Pad4)" "Net-(IC11-Pad4)" "Net-(Load/WB2-Pad2)" "Net-(A0-Pad2)" "Net-(A0-Pad3)" "Net-(A1-Pad2)" "Net-(A2-Pad2)"
+    "/HFCaricoVariabile-ReleDriver/RL-SCK" "/HFCaricoVariabile-ReleDriver/RL-SDA" "Net-(10-Ohm1-Pad2)" "Net-(10-Ohm1-Pad4)" "Net-(10-Ohm1-Pad7)" "Net-(40-Ohm1-Pad2)" "Net-(40-Ohm1-Pad4)" "Net-(40-Ohm1-Pad7)"
+    "Net-(R12-Pad1)" "Net-(R35-Pad1)" "Net-(R36-Pad1)" "Net-(R14-Pad1)" "Net-(1200-Ohm1-Pad2)" "Net-(1200-Ohm1-Pad4)" "Net-(1200-Ohm1-Pad6)" "Net-(1200-Ohm1-Pad7)"
+    "/HFCaricoVariabile-Load/RL1200" "Net-(1280R1-Pad2)" "Net-(160-Ohm1-Pad2)" "Net-(160-Ohm1-Pad3)" "Net-(160-Ohm1-Pad4)" "Net-(160-Ohm1-Pad6)" "Net-(160-Ohm1-Pad7)" "/HFCaricoVariabile-Load/RL0160"
+    "Net-(160R1-Pad2)" "Net-(320-Ohm1-Pad2)" "Net-(320-Ohm1-Pad3)" "Net-(320-Ohm1-Pad4)" "Net-(320-Ohm1-Pad7)" "/HFCaricoVariabile-Load/RL0320" "Net-(320R1-Pad2)" "Net-(40R1-Pad2)"
+    "Net-(640-Ohm1-Pad2)" "Net-(640-Ohm1-Pad4)" "Net-(640-Ohm1-Pad7)" "/HFCaricoVariabile-Load/RL0640" "Net-(640R1-Pad2)" "Net-(80-Ohm1-Pad2)" "Net-(80-Ohm1-Pad4)" "Net-(80-Ohm1-Pad7)"
+    "/HFCaricoVariabile-Load/RL0080" "Net-(80R1-Pad2)" "Net-(R39-Pad1)" "Net-(R11-Pad2)" "Net-(R16-Pad2)" "/HFCaricoVariabile-ReleDriver/RL-RESET" "Net-(R44-Pad1)" +3V3
+    "Net-(C7-Pad2)" "Net-(C7-Pad1)" "Net-(C8-Pad2)" "Net-(C8-Pad1)" "Net-(D1-Pad1)" "Net-(R46-Pad1)" "Net-(R47-Pad1)" "Net-(R52-Pad2)"
+    "Net-(R54-Pad2)" "Net-(C11-Pad2)" "Net-(C11-Pad1)" "Net-(D7-Pad2)" "Net-(Meas.1-Pad2)" "Net-(R48-Pad1)" "/HFCaricoVariabile-Load/WB-ReferenceOut" "Net-(R56-Pad2)"
+    "/HFCaricoVariabile-Load/WB-MeasureOut" "Net-(R58-Pad1)" "/HFCaricoVariabile-Load/Rx>Rref" "/HFCaricoVariabile-Load/Rx<Rref" "Net-(R50-Pad2)" "Net-(R51-Pad2)" "Net-(D11-Pad2)" "/HFCaricoVariabile-Load/RLRx-Zx"
+    "Net-(IC1-Pad4)" "Net-(R61-Pad1)" "Net-(R63-Pad2)" "Net-(D7-Pad3)" "Net-(C16-Pad2)" "Net-(C16-Pad1)" "Net-(D12-Pad1)" "Net-(R64-Pad1)"
+    "Net-(R66-Pad2)" "Net-(R67-Pad2)" "Net-(R62-Pad1)" "Net-(Load-RFIn1-Pad2)" "Net-(CC/RF1-Pad3)" "-3V3" "Net-(R69-Pad2)" "Net-(R69-Pad1)"
+    "Net-(R70-Pad2)" "Net-(R70-Pad1)" "Net-(R72-Pad2)" "Net-(R73-Pad2)"
+    (clearance_class "kicad_default")
+    (via_rule kicad_default)
+    (rule
+      (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class +5VDigital
+    +5V
+    (clearance_class +5VDigital)
+    (via_rule +5VDigital)
+    (rule
+      (width 400.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "GND-Analog"
+    GNDA
+    (clearance_class "GND-Analog")
+    (via_rule GND-Analog)
+    (rule
+      (width 400.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class RF
+    "Net-(20-Ohm1-Pad2)" "Net-(20-Ohm1-Pad4)" "Net-(5-Ohm1-Pad4)" "Net-(R10-Pad1)" "Net-(R11-Pad1)" "/HFCaricoVariabile-Load/RF" "/HFCaricoVariabile-Load/GND-WB" "/HFCaricoVariabile-Load/RL0020"
+    "/HFCaricoVariabile-Load/RL0005" "/HFCaricoVariabile-Load/RL0010" "/HFCaricoVariabile-Load/RL0040" "/HFCaricoVariabile-Load/HF Carico Variabile Differential OpAmp Measure/WB-Measure" "/HFCaricoVariabile-Load/HF Carico Variabile Differential OpAmp Measure/WB-Reference" "/HFCaricoVariabile-Load/1mACC" "/HFCaricoVariabile-Load/HF Carico Variabile Differential OpAmp Measure/RFLevel" "/HFCaricoVariabile-Load/RFLevel-Out"
+    (clearance_class RF)
+    (via_rule RF)
+    (rule
+      (width 250.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+)
