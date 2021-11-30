@@ -1,0 +1,13 @@
+29/11/2021
+Errore nella serigrafia 
+- Il relè del 1280 reca la dicitura 1200
+- Il LED di power ON è indicato come Rx-Zx2
+- Le serigrafie dei diodi D5; D6 e D16 sono prive della marca di polarizzazione
+- La serigrafia di D16 e della R74 sono sovrapposte
+ Errore circuitale
+ - mancano le piazzole per poter utilizzare i piedini liberi del bus expander
+ 
+ Migliorie
+ -Agguingere la possibilità di montare un mosfet 3 piedini in alternativa ai STS6NF20V
+ - Inserire un jumper per poter scegliere la tensione di lavoro dei relè (3.3; 5; 12)
+ 
